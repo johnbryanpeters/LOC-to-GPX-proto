@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="HelloWorld.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloWorld"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid RequestedTheme ="Light" 
+          Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <!-- Added to create controls. -->
+        <StackPanel RequestedTheme="Light">
+            <TextBlock Text="Topographix .loc file decoder" Margin="0,0,0,40" Height="18"/>
+            <TextBlock Text="What's your name?"/>
+            <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,0,20">
+                <TextBox x:Name="nameInput" Width="280" HorizontalAlignment="Left"/>
+                <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="Button_Click"/>
+            </StackPanel>
+            <TextBlock x:Name="greetingOutput"/>
+            <Button x:Name="bOpenFileDialog" Content="Open File" Click="bOpenFileDialog_Click"/>
+            <TextBlock x:Name="openedFile"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>
